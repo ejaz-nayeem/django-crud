@@ -1,0 +1,27 @@
+
+{% extends 'base.html'%}
+{% block content %}
+<title>Update</title>
+<nav class="navbar"></nav>
+		<div class="navdiv">
+			
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/form">Add Information</a></li>
+				<li><a href="/delete">Delete</a></li>
+				<li><a href="/update">Update</a></li>
+                
+			</ul>
+		</div>
+	</nav>
+<h1>Update</h1>
+ 
+<ul>
+    {% for data in info %}
+    <li>
+        {{ data.id }}. {{ data.name }} | <a href="{% url 'update' data.id %}">Update</a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

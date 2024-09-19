@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav class="navbar"></nav>
+		<div class="navdiv">
+			
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/form">Add Information</a></li>
+				<li><a href="/delete">Delete</a></li>
+				<li><a href="/update">Update</a></li>
+                
+			</ul>
+		</div>
+	</nav>
+<h1>Info Detail</h1>
+
+<p><strong>Name:</strong> {{ info.name }}</p>
+<p><strong>Address:</strong> {{ info.address }}</p>
+<p><strong>Phone:</strong> {{ info.phone }}</p>
+<p><strong>Salary</strong> {{ info.salary }}</p>
+<p><strong>Designation</strong> {{ info.designation }}</p>
+<p><strong>Description</strong> {{ info.description }}</p>
+{% endblock %}

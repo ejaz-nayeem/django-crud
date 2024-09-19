@@ -1,0 +1,35 @@
+
+{% extends 'base.html'%}
+{% block content %}
+<title>Delete Page</title>
+<nav class="navbar"></nav>
+		<div class="navdiv">
+			
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/form">Add Information</a></li>
+				<li><a href="/delete">Delete</a></li>
+				<li><a href="/update">Update</a></li>
+                
+			</ul>
+		</div>
+	</nav>
+<h1>Delete info</h1>
+
+ 
+<ul>
+    {% for data in info %}
+    <li>
+        {{ data.id }}.{{ data.name }} | <a href="{% url 'delete' data.id %}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<br>
+
+
+<br>
+
+
+
+{% endblock %}
